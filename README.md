@@ -1,111 +1,75 @@
-
-
-```markdown
 # 🩺 Liver Cirrhosis Prediction using Machine Learning
 
-This project uses machine learning to predict the risk of liver cirrhosis based on medical data, such as patient demographics, alcohol consumption, and blood test results. The goal is to aid healthcare professionals in early detection and intervention.
+This project aims to predict liver cirrhosis in patients using clinical data and machine learning models. The application leverages modern ML techniques, backed by a Flask web interface, to assist healthcare providers in early detection and decision-making.
 
 ---
 
 ## 📌 Problem Statement
 
-Liver cirrhosis is a chronic disease that often remains undiagnosed until advanced stages. Traditional diagnostic approaches are reactive rather than proactive. This system leverages ML to assist in predicting cirrhosis risk from routine clinical parameters.
+Liver cirrhosis is a chronic condition where healthy liver tissue is replaced with scar tissue, leading to serious health risks. Early diagnosis is difficult using conventional methods. This project addresses the problem by using machine learning to detect cirrhosis risk early, using patient data such as blood tests, alcohol use, and other liver health metrics.
 
 ---
 
 ## 🎯 Objectives
 
-- Predict liver cirrhosis using supervised learning techniques
-- Evaluate performance of multiple models
-- Deploy the best model via a web application
-- Enable users to get predictions through an easy-to-use form
+- Predict the likelihood of liver cirrhosis based on clinical input data.
+- Assist doctors in making early and effective diagnoses.
+- Deploy a web-based predictive interface for real-time usage.
 
 ---
 
-## 🧠 Technologies Used
+## 📊 Dataset
 
-- **Python** – Data handling and modeling
-- **Scikit-learn** – ML algorithms (Random Forest, SVM, Logistic Regression)
-- **Flask** – Web framework for API and routing
-- **HTML/CSS** – Frontend form styling
-- **Gunicorn** – WSGI server for deployment
-- **Render.com** – Cloud hosting and deployment
+The dataset used in this project was sourced from Kaggle:  
+🔗 [Liver Cirrhosis Prediction Dataset](https://www.kaggle.com/datasets/bhavanipriya222/liver-cirrhosis-prediction)
 
----
+**Features Include:**
+- Age, Gender
+- Alcohol consumption
+- Liver enzyme levels (ALT, AST, etc.)
+- Albumin, Bilirubin, and other blood test parameters
 
-## 🗂 Dataset
-
-Dataset source:  
-📂 [Kaggle Liver Cirrhosis Dataset](https://www.kaggle.com/datasets/bhavanipriya222/liver-cirrhosis-prediction)
-
-- Features include age, gender, alcohol use, liver enzymes, platelet count, etc.
-- Preprocessing includes:
-  - Handling missing values
-  - Label encoding
-  - Outlier detection
-  - Normalization
+**Preprocessing Steps:**
+- Handling missing values
+- Encoding categorical data
+- Outlier detection
+- Feature scaling
+- Train-test splitting
 
 ---
 
-## 🏗 Project Structure
+## 🤖 Machine Learning Models Used
 
-```
+- Logistic Regression
+- Support Vector Machine (SVM)
+- Random Forest Classifier ✅ *(Selected model)*
 
-LiverCirrohsisPrediction1/
-├── app/
-│   ├── app.py               # Main Flask application
-│   ├── rf\_acc\_68.pkl        # Trained Random Forest model
-│   ├── normalizer.pkl       # Feature scaler
-├── model/
-│   └── model\_training.py    # Model training script
-├── requirements.txt         # Dependency list
-├── Procfile                 # Render startup script
+The models were evaluated on:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
 
-````
+🏆 **Best Accuracy Achieved**: ~98% with Random Forest Classifier
 
 ---
 
+## 🔧 Technologies Used
 
-
-## 🧪 Model Performance
-
-| Model               | Accuracy |
-| ------------------- | -------- |
-| Logistic Regression | \~94%    |
-| SVM                 | \~96%    |
-| ✅ Random Forest     | **98%**  |
+- **Python**: Data processing, model training
+- **Scikit-learn**: ML modeling
+- **Flask**: Backend web server
+- **HTML/CSS**: Simple frontend UI
+- **Jupyter Notebook**: Development environment
 
 ---
 
-## 🖼 UI Preview
+## 🧪 Project Workflow
 
-| Input Page                     | Result Page                       |
-| ------------------------------ | --------------------------------- |
-| ![Input](screenshots/form.png) | ![Result](screenshots/result.png) |
-
----
-
-## 🧩 Frontend Reference (Unlinked Demo)
-
-👉 Here is a sample **Procurement & Sales Management System UI** (demo HTML-only):
-
-🔗 [Frontend Sample](https://your-demo-placeholder-link.com)
-
-> *Note: This is a design reference only, not connected to this backend.*
-
----
-
-## ✅ Result
-
-✔ Real-time liver cirrhosis prediction
-✔ 98% accuracy using Random Forest
-✔ Intuitive web UI for user interaction
-✔ Open-source and easy to extend
-
----
-
-
-
-
-
-
+```mermaid
+graph LR
+A[Data Collection] --> B[Preprocessing]
+B --> C[Model Building]
+C --> D[Evaluation]
+D --> E[Deployment]
+E --> F[Prediction Output]
