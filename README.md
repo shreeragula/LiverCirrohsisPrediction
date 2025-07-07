@@ -65,21 +65,7 @@ LiverCirrohsisPrediction1/
 
 ---
 
-## 🚀 How to Deploy on Render
 
-1. **Create GitHub Repo** and push the project
-2. **Create a new Web Service** at [https://render.com](https://render.com)
-3. Fill in the fields:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app.app:app`
-4. Add a file `.python-version` with:
-   ```text
-   3.10
-````
-
-5. Deploy and visit your live link!
-
----
 
 ## 🧪 Model Performance
 
@@ -118,19 +104,8 @@ LiverCirrohsisPrediction1/
 
 ---
 
-## 📚 Authors
 
-* Bindhushree Ragula
-* Kadiri Neha Reddy
-* Suhita Pentakota
-* RVS Pranav Varma
 
----
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
-```
 
 
